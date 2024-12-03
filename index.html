@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info-Page</title>
+    <link rel="stylesheet" href="output.css" />
+</head>
+
+<body class="lg:flex lg:align-center h-full lg:h-auto lg:justify-center lg:pt-40 bg-custom-blue relative">
+    <!--main container-->
+    <div class=" lg:border flex lg:bg-white w-full lg:max-w-5xl flex-col lg:flex-row lg:rounded-2xl">
+        <div class="lg:px-4 lg:py-4 relative h-68 min-h-[300px] lg:h-auto">
+            <img src="./images/bg-sidebar-desktop.svg"
+                class=" w-full  hidden lg:block h-full rounded-xl min-h-[400px] object-cover" />
+            <img src="./images/bg-sidebar-mobile.svg"
+                class=" object-cover w-full lg:hidden w-full h-full min-h-[400px]" />
+            <div class="absolute left-0 top-0 flex flex-col align-center w-full h-full lg:block lg:pl-6">
+                <div
+                    class=" flex lg:flex-col p-4 flex-row lg:h-auto h-28 w-full justify-center mt-[7vw] lg:mt-0 ">
+                    <div class="flex lg:mt-12">
+                        <div
+                            class="lg:text-xl  border rounded-full lg:w-11 text-center lg:pt-2 font-bold bg-new-blue w-[60px] h-[60px] lg:h-auto text-3xl pt-3" id="section-1">
+                            1</div>
+                        <div class="ml-3">
+                            <p class="text-sm text-gray-300 hidden lg:block">STEP 1</p>
+                            <p class="font-bold text-white hidden lg:block ">YOUR INFO</p>
+                        </div>
+                    </div>
+                    <div class="flex lg:mt-8">
+                        <div
+                            class="lg:text-xl  border rounded-full lg:w-11 text-center lg:pt-2 font-bold w-[60px] h-[60px] lg:h-auto text-3xl pt-3 text-white" id="section-2">
+                            2</div>
+                        <div class="ml-3">
+                            <p class="text-sm text-gray-300 hidden lg:block">STEP 2</p>
+                            <p class="font-bold text-white hidden lg:block">SELECT PLAN</p>
+                        </div>
+                    </div>
+                    <div class="flex lg:mt-8">
+                        <div
+                            class="lg:text-xl  border rounded-full lg:w-11 text-center lg:pt-2 font-bold  w-[60px] h-[60px] lg:h-auto text-3xl pt-3 text-white" id="section-3">
+                            3</div>
+                        <div class="ml-3">
+                            <p class="text-sm text-gray-300 hidden lg:block">STEP 3</p>
+                            <p class="font-bold text-white hidden lg:block">ADD-ONS</p>
+                        </div>
+                    </div>
+                    <div class="flex lg:mt-8">
+                        <div
+                            class="lg:text-xl  border rounded-full lg:w-11 text-center lg:pt-2 font-bold   w-[60px] h-[60px] lg:h-auto text-3xl pt-3 text-white" id="section-4">
+                            4</div>
+                        <div class="ml-3">
+                            <p class="text-sm text-gray-300 hidden lg:block">STEP 4</p>
+                            <p class="text-white font-bold text-white hidden lg:block">SUMMARY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="" id="page-1">
+            <form id="info-form"
+                class="sm:mx-8 lg:pt-16 lg:px-28 m-6 px-8 pt-16 border relative -top-44   bg-white lg:static lg:m-0 lg:border-0 rounded-3xl">
+                <h1 class="text-4xl font-bold mb-3">Personal info</h1>
+                <p class="text-gray-400 mb-6">Please provide your name,email address ,and phone number.</p>
+                <label for="name" class="text-sm text-gray-600 font-bold">Name</label>
+                <p id="first-input-error" class="font-bold text-end text-sm text-red-600 hidden" >This field is required
+                </p>
+                <input data-error="first-input-error"
+                    class="first-input block outline outline-1 w-full mb-6 mt-1 p-3 rounded-md focus:outline-purple-600"
+                    id="name" type="text" placeholder="eg. unknown" data-name = "name" />
+                <label for="email" class="text-sm text-gray-600 font-bold">Email</label>
+                <p id="second-input-error" class="font-bold text-end text-sm text-red-600 hidden">This field is required
+                </p>
+                <input data-error="second-input-error"
+                    class="first-input block w-full outline outline-1  mb-6 mt-1 p-3 rounded-md focus:outline-purple-600"
+                    id="email" type="email" placeholder="eg. abc@gmail.com" data-name = "email"/>
+                <label for="number" class="text-sm text-gray-600 font-bold">Phone Number</label>
+                <p id="third-input-error" class="font-bold text-end text-sm text-red-600 hidden">This field is required
+                </p>
+                <input data-error="third-input-error"
+                    class="first-input block outline outline-1 w-full lg:mb-40 mt-1 p-3 rounded-md mb-6 focus:outline-purple-600"
+                    id="no" type="text" placeholder="eg. +91 123456789"  data-name = "number"/>
+            </form>
+            <div class="bg-white absolute bottom-0 right-0 w-full lg:w-auto p-4 lg:static lg:px-28 ">
+                <button form="info-form"
+                    class="border px-4 py-2 block ml-auto text-white bg-custom-blue-2 lg:mb-6 rounded-md" id="next-btn"
+                    type="submit">Next step</button>
+            </div>
+        </div>
+        <div class="lg:w-[70%]  w-full hidden" id="page-2">
+            <form id="plan-form"
+                class=" lg:pt-16 lg:px-24 m-6 px-8 pt-16 border relative -top-44 sm:pb-24 bg-white lg:static lg:m-0 lg:border-0 rounded-3xl ">
+               <div class="lg:mb-12">
+                <h1 class="text-4xl font-bold mb-3">Select your plan</h1>
+                <p class="text-gray-400 mb-6">you have the option of monthly or yearly billing.</p>
+                <p id="plan-error" class="font-bold text-end text-sm text-red-600 hidden">Select a plan</p>
+                <div class="lg:mt-3 flex justify-between flex-col lg:flex-row">
+                    <div class=" lg:w-[30%] w-full lg:mb-0 mb-6">
+                        <label for="arcade"
+                            class="border hover:border-green-700 hover:bg-new-blue  border-black flex lg:flex-col items-center p-4 rounded-xl flex-row plan-label">
+                            <img src="./images/icon-arcade.svg" class="lg:mb-8 block w-[80px] mr-4 lg:mr-0" />
+                            <div class="flex flex-col ">
+                                <p class="lg:text-center text-xl font-bold">Arcade</p>
+                                <p class="lg:text-center text-left text-gray-500" id="price-1"  >$9/mo</p>
+                                <p class="text-sm mt-1 text-blue-800 hidden free-para">2 months free</p>
+                            </div>
+                        </label>
+                        <input id="arcade" type="checkbox" class="hidden plan-input" data-val='9' data-pack = 'monthly' />
+                    </div>
+                    <div class=" lg:w-[30%] w-full lg:mb-0 mb-6">
+                        <label for="advanced"
+                            class="border border-1 hover:border-green-700 hover:bg-custom-blue  border-black flex lg:flex-col items-center p-4 rounded-xl flex-row plan-label">
+                            <img src="./images/icon-advanced.svg" class="lg:mb-8 block w-[80px] mr-4 lg:mr-0" />
+                            <div class="flex flex-col ">
+                                <p class="lg:text-center text-xl font-bold">Advanced</p>
+                                <p class="lg:text-center text-left text-gray-500" id="price-2" data-val = '12' data-pack = 'monthly'>$12/mo</p>
+                                <p class="text-sm mt-1 text-blue-800 hidden free-para">2 months free</p>
+                            </div>
+                        </label>
+                        <input id="advanced" type="checkbox" class="hidden plan-input" data-val='12' data-pack = 'monthly'/>
+                    </div>
+                    <div class=" lg:w-[30%] w-full lg:mb-0 mb-12">
+                        <label for="pro"
+                            class="border hover:border-green-700 hover:bg-custom-blue  border-1 border-black flex lg:flex-col items-center p-4 rounded-xl flex-row plan-label">
+                            <img src="./images/icon-pro.svg" class="lg:mb-8 block w-[80px] mr-4 lg:mr-0" />
+                            <div class="flex flex-col ">
+                                <p class="lg:text-center text-xl font-bold">Pro</p>
+                                <p class="lg:text-center text-left text-gray-500" id="price-3" data-val = '15' data-pack = 'monthly'>$15/mo</p>
+                                <p class="text-sm mt-1 text-blue-800 hidden free-para">2 months free</p>
+                            </div>
+                        </label>
+                        <input id="pro" type="checkbox" class="hidden plan-input" data-val='15' data-pack = 'monthly'/>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center items-center mb-8">
+                <p class="font-bold text-custom-blue-2" id="monthly-title">Monthly</p>
+                <div class="w-[80px] mx-6 rounded-3xl h-[40px] bg-custom-blue-2 relative" id = "toggle-container">
+                    <div class="w-[35px] h-[35px] rounded-full  bg-white absolute left-[2px] top-[2px] " id ='toggle-btn'>
+
+                    </div>
+                </div>
+                <p class="font-bold text-gray-500" id="yearly-title">yearly</p>
+            </div>
+            </form>
+
+            <div class="bg-white sticky bottom-0 right-0 w-full lg:w-auto p-4 lg:static lg:px-24 flex justify-between lg:mt-2 hidden"
+                id="page-2-btns">
+                <button class="bg-white py-2 px-4 lg:mb-6 font-bold " id="go-back-btn-1">Go Back</button>
+                <button form="plan-form" class="border px-4 py-2 block text-white bg-custom-blue-2 lg:mb-6 rounded-md"
+                    id="next-btn-2" type="submit">Next step</button>
+            </div>
+        </div>
+        <div class="lg:w-[70%] hidden w-full" id="page-3">
+            <form id="add-on-form"
+                class=" lg:pt-16 lg:px-24 m-6 px-8 pt-16 border relative -top-44 sm:pb-24 bg-white lg:static lg:m-0 lg:border-0 rounded-3xl ">
+               <div class="lg:mb-12">
+                <h1 class="text-4xl font-bold mb-3">Pick add-ons</h1>
+                <p class="text-gray-400 mb-6">Add-ons help enhance your gaming experience.</p>
+                <div class="lg:mt-3 flex justify-between flex-col ">
+                     <div class="flex mb-6 border p-6 rounded-lg justify-between items-center add-on-input-containers" data-input = "add-on-inputs-1">
+                        <div class="flex items-center">  
+                        <input type="checkbox" class="w-[20px] h-[20px] add-on-inputs" id = "add-on-inputs-1" data-title = "Online service" data-val = "1"/>
+                          <div class="ml-8">
+                            <p class="font-bold text-lg">Online service</p>
+                            <p class="text-sm text-gray-500">Access to multiplayer games</p>
+                          </div>
+                          </div>
+                          <p class="text-blue-800" id="add-on-price-1"> +$1/mo</p>
+                     </div>
+                     <div class="flex mb-6 border p-6 rounded-lg justify-between items-center add-on-input-containers" data-input="add-on-inputs-2">
+                        <div class="flex items-center">  
+                        <input type="checkbox" class="w-[20px] h-[20px] add-on-inputs" data-title = "Larger Storage" data-val = "2" id="add-on-inputs-2"/>
+                          <div class="ml-8">
+                            <p class="font-bold text-lg">Larger storage</p>
+                            <p class="text-sm text-gray-500">Extra 1TB of cloud save</p>
+                          </div>
+                          </div>
+                          <p class="text-blue-800" id="add-on-price-2"> +$2/mo</p>
+                     </div>
+                     <div class="flex mb-6 border p-6 rounded-lg justify-between items-center add-on-input-containers" data-input="add-on-inputs-3">
+                        <div class="flex items-center">  
+                        <input type="checkbox" class="w-[20px] h-[20px] add-on-inputs" data-title = "Customizable profile" data-val = "2" id= "add-on-inputs-3"/>
+                          <div class="ml-8">
+                            <p class="font-bold text-lg">Customizable profile</p>
+                            <p class="text-sm text-gray-500">custom theme on your profile</p>
+                          </div>
+                          </div>
+                          <p class="text-blue-800" id="add-on-price-3"> +$2/mo</p>
+                     </div>
+                </div>
+            </div>
+            </form>
+
+            <div class="bg-white sticky bottom-0 right-0 w-full lg:w-auto p-4 lg:static lg:px-24 flex justify-between lg:mt-2 "
+                id="page-3-btns">
+                <button class="bg-white py-2 px-4 lg:mb-6 font-bold " id="go-back-btn-2">Go Back</button>
+                <button form="" class="border px-4 py-2 block text-white bg-custom-blue-2 lg:mb-6 rounded-md"
+                    id="next-btn-3" type="submit">Next step</button>
+            </div>
+        </div>
+        <div class="lg:w-[70%] w-full lg:relative hidden" id="page-4">
+            <form id="add-on-form"
+                class=" lg:pt-16 lg:px-24 m-6 px-8 pt-16 border relative -top-44 sm:pb-24 bg-white lg:static lg:m-0 lg:border-0 rounded-3xl ">
+               <div class="lg:mb-12">
+                <h1 class="text-4xl font-bold mb-3">Finishing Up</h1>
+                <p class="text-gray-400 mb-6">Double-check everything looks OK before confirming.</p>
+                <div class="bg-custom-blue p-4 mb-6 rounded-xl" id="final-container">
+                    <div class="flex justify-between mb-4 ">
+                        <div>
+                            <p id = "plan-name" class="font-bold text-gray-800"></p>
+                            <a href="" class="underline text-blue-600 text-sm" id="change">Change</a>
+                        </div>
+                        <p class="font-bold text-gray-800 text-sm" id="final-price"></p>
+                    </div>
+                    <hr>
+                    <div class="" id="final-container-inner">
+
+                    </div>
+                </div>
+                <div class="flex justify-between mb-6 p-4 font-bold" id="total-price">
+                    <p class="text-gray-500" id="total-price-title"></p>
+                    <p id="total-price-price" class="text-blue-800 text-xl"></p>
+                 </div>
+            </div>
+            </form>
+
+            <div class="bg-white bottom-0 right-0 hidden w-full lg:w-full p-4 absolute lg:px-24 flex justify-between lg:mt-2 "
+                id="page-4-btns">
+                <button class="bg-white py-2 px-4 lg:mb-6 font-bold " id="go-back-btn-3">Go Back</button>
+                <button form="" class="border px-4 py-2 block text-white bg-custom-blue-2 lg:mb-6 rounded-md"
+                    id="next-btn-4" type="submit">Next step</button>
+            </div>
+        </div>
+        <div class="lg:w-[70%] w-[80%] mx-auto rounded-3xl p-16 bg-white relative lg:static -top-44 flex hidden flex-col justify-center items-center" id="page-5">
+           <img src="./images/icon-thank-you.svg" class="w-[100px] h-[100px] mb-8" />
+           <h1 class="text-4xl font-bold mb-4">Thank You!</h1>
+           <p class="text-center">Thanks for confirming your subscription! We hope you have fun using out platform. If you ever need support, please feel free to email us at support@loremgaming.com</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
